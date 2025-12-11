@@ -171,7 +171,6 @@ El flujo CHILD espera como entrada, al menos:
   - Biblioteca de plantillas.
   - Biblioteca destino para el proyecto.
 - URLs de instructivos (si se usan en el correo).
-- Objeto `cfg` (opcional).
 
 ### 4.2 Creación de estructura documental (CreateCopyJobs)
 
@@ -185,26 +184,10 @@ El flujo CHILD espera como entrada, al menos:
    - Cabeceras:
      - `Accept: application/json;odata=nometadata`
      - `Content-Type: application/json;odata=nometadata`
-3. **Monitoreo del job (opcional)**
-   - Se puede consultar el estado del job hasta que finalice o se alcance un timeout.
-4. **Resultado**
+3. **Resultado**
    - Obtención de la URL de la carpeta raíz del proyecto y/o subcarpetas clave para usar en pasos siguientes.
 
-### 4.3 Actualización de lista maestra
-
-- Acción: `Create item` o `Update item` en `Projects Master list`.
-- Campos actualizados:
-  - ID único del proyecto.
-  - Metadatos del formulario.
-  - Enlaces generados:
-    - Carpeta raíz del proyecto.
-    - Cost tracking.
-    - Gantt / MS Project.
-    - Dashboard.
-    - Canal de Teams (una vez creado).
-  - Estado inicial del proyecto (por ejemplo: “Inicializado”).
-
-### 4.4 Creación de canal de Teams y mensaje de bienvenida
+### 4.3 Creación de canal de Teams y mensaje de bienvenida
 
 1. **Creación de canal**
    - Uso de HTTP con Microsoft Graph:
@@ -231,34 +214,28 @@ El flujo CHILD espera como entrada, al menos:
 
 ## 5. Modelo de datos (resumen)
 
-### 5.1 Lista de solicitudes (`ALLOPS CapEx Requests`)
+### 5.1 Formulario de proyecto
 
 Campos mínimos recomendados:
 
-- `Title` (puede ser el nombre del proyecto).
-- `CountryCompany`
-- `ProjectName`
-- `InternalID`
-- `Requester` (persona / correo).
-- `Complexity`
+- `CapExName`
+- `País`
 - `FiscalYear`
-- `ALLOPSProjectId` (rellenado por el flujo PARENT).
 
 ### 5.2 Lista maestra de proyectos (`Projects Master list`)
 
-- `Title` (Nombre del proyecto).
-- `ALLOPSProjectId` (clave principal).
-- `CountryCompany`
-- `Plant`
-- `Requester`
+- `CapExName` (Nombre del proyecto).
+- `CPX ID#` (clave principal).
+- `País`
+- `Planta`
+- `Creado por`
 - `PmEmail`
 - `FiscalYear`
 - `ProjectFolderUrl`
 - `CostTrackingUrl`
-- `MsProjectUrl`
 - `DashboardUrl`
 - `TeamsChannelUrl`
-- `Status` (Inicializado, En ejecución, Cerrado, etc.).
+- `Status`
 
 ---
 
@@ -282,7 +259,6 @@ Campos mínimos recomendados:
 
 - La cuenta (o cuentas de conexión) usadas por los flujos debe tener:
   - Permisos de **Editar** en:
-    - Lista de solicitudes.
     - Lista maestra de proyectos.
     - Biblioteca de plantillas.
     - Biblioteca destino de proyectos.
@@ -300,9 +276,7 @@ Campos mínimos recomendados:
   - Actualizar nombres de listas (Requests / Master list).
   - Revisar URLs de instructivos.
   - Ajustar formato del ID único (prefijos por país, año fiscal, etc.).
-- En entornos con varios países, el PARENT puede:
-  - Determinar el país desde el formulario.
-  - Llamar a diferentes CHILD flows (uno por país) o enviar parámetros que definan rutas y plantillas específicas.
+  
 
 ---
 
