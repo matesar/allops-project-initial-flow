@@ -144,17 +144,8 @@ Pasos típicos:
 3. **Actualizar ítem de la solicitud**
    - Guardar el ID único generado en la lista de solicitudes (para trazabilidad).
 
-### 3.3 Inicialización de configuración
 
-- Variable objeto `cfg` con:
-  - URLs base del sitio ALLOPS.
-  - Ruta de la biblioteca de plantillas.
-  - Ruta de la biblioteca destino para los proyectos.
-  - IDs de listas (Requests / Master list).
-  - URLs de instructivos.
-- Variable `varError` inicializada en blanco (para que el CHILD pueda registrar en qué etapa falla).
-
-### 3.4 Llamada al flujo CHILD
+### 3.3 Llamada al flujo CHILD
 
 - Acción: **Run a child flow**.
 - Parámetros típicos que se envían:
@@ -162,7 +153,6 @@ Pasos típicos:
   - Campos de la solicitud (país, planta, nombre, responsable, FY, etc.).
   - Rutas de origen/destino para plantillas.
   - Correos del responsable y otros interesados.
-  - Objeto `cfg` (opcional, según diseño del CHILD).
 
 ---
 
