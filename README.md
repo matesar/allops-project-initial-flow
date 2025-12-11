@@ -2,6 +2,7 @@
 
 Automatización del alta de proyectos de inversión (CapEx) en ALLOPS utilizando Power Automate, SharePoint Online y Microsoft 365.  
 El flujo crea la estructura documental base del proyecto, genera enlaces útiles (Gantt, MS Project, cost tracking, dashboard, carpeta compartida, etc.) y envía un correo automático de bienvenida al responsable del proyecto.
+Desarrollado para empresa multinacional para el uso en la región LATAM.
 
 ---
 
