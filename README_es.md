@@ -143,7 +143,8 @@ Ver diagrama y detalles técnicos en [`docs/architecture_es.md`](docs/architectu
 │   ├── CapexProjectInitApp.msapp          # Export de la app
 │   └── app_info_es.md                     # Detalle de la app
 └── assets/
-│   └── screenshots
+│   └── app_screenshots
+│   └── flows_screenshots
 └── docs                         
     └── architecture_es.md                 # Documentación técnica de la arquitectura del flujo
     └── solution_export
