@@ -49,7 +49,7 @@ Tecnologías utilizadas en los flujos:
 - **REST API de SharePoint** (`CreateCopyJobs`) para copiar plantillas de carpetas/archivos.
 - **REST API de Microsoft Graph** para crear canal y publicaciones de bienvenida.
 
-Más detalle técnico en [`flows_info`](flows_info).
+Más detalle técnico en [`flows/flows_info_es.md`](flows/flows_info_es.md).
 
 ---
 
@@ -126,7 +126,7 @@ El flujo de alto nivel es:
      - Acceder a todos los recursos asociados.
      - Consultar dashboards filtrados por proyecto.
 
-Ver diagrama y detalles técnicos en [`docs/arquitectura.md`](docs/arquitectura.md).
+Ver diagrama y detalles técnicos en [`docs/architecture_es.md`](docs/architecture_es.md).
 
 ---
 
@@ -134,16 +134,16 @@ Ver diagrama y detalles técnicos en [`docs/arquitectura.md`](docs/arquitectura.
 
 ```text
 .
-├── README.md                      # Visión general de TODA la solución
+├── README_es.md                      # Visión general de TODA la solución
 ├── flows/
 │   ├── <CPXProvisioningChild-292B8380-6DC1-F011-BBD2-6045BD9F321D>.json       # Export del flujo de Power Automate CHILD
 │   └── <CPXinitializationARParent-CFFF159C-D4CA-F011-8544-7CED8D592B6B>.json  # Export del flujo de Power Automate PARENT
-│   └── flows_info                                                             # Detalle de los flujos
+│   └── flows_info_es.md                                                       # Detalle de los flujos
 ├── powerapps/
 │   ├── CapexProjectInitApp.msapp          # Export de la app
-│   └── app_info.md                        # Detalle de la app
+│   └── app_info_es.md                     # Detalle de la app
 └── assets/
 │   └── screenshots
 └── docs                         
-    └── arquitectura.md                 # Documentación técnica de la arquitectura del flujo
+    └── architecture_es.md                 # Documentación técnica de la arquitectura del flujo
     └── solution_export
