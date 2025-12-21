@@ -3,7 +3,7 @@
 Flujo de alto nivel:
 
 1. **Disparador**  
-- Trigger: **When an item is created** en una lista de SharePoint (formulario simple de alta de proyecto).
+- Trigger: **When an item is created** en una lista de SharePoint (formulario funcional dentro de la Power App de la misma Solution).
 - El formulario lo completa el **Project Manager** o responsable del proyecto.
 - Campos a completar:
   - Nombre del proyecto
